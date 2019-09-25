@@ -1,0 +1,31 @@
+﻿<Window x:Class="BARKIN_praktika.RSA"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BARKIN_praktika"
+        mc:Ignorable="d"
+        Title="RSA" Height="348.914" Width="296.398"
+        WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+    <Grid Margin="0,10,-16,-12">
+        <Label Content="Простые числа" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,26,0,0"/>
+        <Label Content="P=" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,57,0,0"/>
+        <Label Content="q=" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="143,57,0,0" RenderTransformOrigin="-4.557,0.298"/>
+        <TextBox x:Name="textBox_q" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Margin="173,67,0,0" PreviewTextInput="textBox_q_PreviewTextInput" />
+        <Button x:Name="buttonEncrypt" Content="Зашифровать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Margin="83,97,0,0" Background="#FF1B0707" Height="35" Click="buttonEncrypt_Click"/>
+        <Label Content="Секретный ключ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="83,183,0,0" Height="29" Width="114"/>
+        <Label Content="D=" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,229,0,0"/>
+        <TextBox x:Name="textBox_d" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" Margin="83,231,0,0" PreviewTextInput="textBox_d_PreviewTextInput"/>
+        <TextBox x:Name="textBox_p" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" Margin="83,67,0,0" PreviewTextInput="textBox_p_PreviewTextInput"/>
+        <Label Content="N=" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="134,229,0,0"/>
+        <TextBox x:Name="textBox_n" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Margin="166,231,0,0" PreviewTextInput="textBox_n_PreviewTextInput"/>
+        <Button x:Name="buttonDecipher" Content="Расшифровать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="77,261,0,0" Background="#FF1B0707" Height="37" Click="buttonDecipher_Click"/>
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Margin="256,-10,0,0" Height="25" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pic/information.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="RSA шифр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,-10,0,0" Height="45" Width="128" FontFamily="Yu Gothic UI Semibold" FontSize="20" Background="{x:Null}" Foreground="#FFB81C5B" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

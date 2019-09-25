@@ -1,0 +1,34 @@
+﻿<Window x:Class="BARKIN_praktika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BARKIN_praktika"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="332.522" Width="627.783"
+    WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
+    <Grid Margin="0,0,2,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Исходный текст" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,49,0,0" Height="42" Width="160" FontWeight="Bold" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button x:Name="startButton" Content="Выполнить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="153" Margin="339,80,0,0" Height="44" FontSize="20" FontWeight="Bold" Click="startButton_Click" Grid.Column="1" Background="#FF301B1B"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Margin="113,58,0,0" Grid.Column="1"/>
+        <TextBox IsReadOnly="True" x:Name="outputTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Margin="113,120,0,0" Grid.Column="1" />
+        <Label Content="Шифрованный" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,110,0,0" FontWeight="Bold" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Content="Ключ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="127,232,0,0" FontWeight="Bold" FontSize="20" Grid.Column="1"/>
+        <TextBox x:Name="keyTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="217,246,0,0" Grid.Column="1" PreviewTextInput="keyTextBox_PreviewTextInput" TextChanged="keyTextBox_TextChanged_1" PreviewKeyDown="keyTextBox_PreviewKeyDown"/>
+        <RadioButton x:Name="encryptRadioButton" Content="Зашифровать" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,222,0,0" FontWeight="Bold" FontSize="20" Grid.ColumnSpan="2" />
+        <RadioButton x:Name="decryptRadioButton" Content="Расшифровать" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,259,0,0" FontWeight="Bold" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Content="Перестановочный шифр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="84,-1,0,0" Height="51" Width="270" FontFamily="Yu Gothic UI Semibold" FontSize="20" Background="{x:Null}" Foreground="#FFB81C5B" Grid.Column="1" FontWeight="Bold"/>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Grid.Column="1" Margin="446,10,0,0" Height="28" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pic/information.png"/>
+            </Button.Background>
+            <TextBlock TextWrapping="Wrap"/>
+        </Button>
+
+    </Grid>
+</Window>
